@@ -29,13 +29,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:{{port}}/api/v1/getfiles",
+					"raw": "http://{{host}}:{{port}}/api/v1/getfiles",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"{{host}}"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -71,13 +68,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:{{port}}/api/v1/getfile",
+					"raw": "http://{{host}}:{{port}}/api/v1/getfile",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"{{host}}"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -110,13 +104,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:{{port}}/api/v1/addfile",
+					"raw": "http://{{host}}:{{port}}/api/v1/addfile",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"{{host}}"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -149,13 +140,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:{{port}}/api/v1/updatefile",
+					"raw": "http://{{host}}:{{port}}/api/v1/updatefile",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"{{host}}"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -188,15 +176,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/api/v1/createpr",
+					"raw": "http://{{host}}:{{port}}/api/v1/createpr",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"{{host}}"
 					],
-					"port": "5000",
+					"port": "{{port}}",
 					"path": [
 						"api",
 						"v1",
@@ -254,6 +239,10 @@
 		{
 			"key": "port",
 			"value": "5000"
+		},
+		{
+			"key": "host",
+			"value": "127.0.0.1"
 		}
 	]
 }
