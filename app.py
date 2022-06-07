@@ -1,4 +1,5 @@
 #import base64
+import base64
 
 from github import Github, GithubException
 
@@ -50,8 +51,9 @@ def api_addfile():
     g = Github(content["user_token"])
     repo = g.get_repo(content["repo_name"])
     source = repo.get_branch("master")
+
     repo.create_git_ref(ref=f"refs/heads/{content['branch_name']}", sha=source.commit.sha)
-    repo.create_file(content["file_path"], content["commit_message"], content["file_data"],
+    repo.create_file(content["file_path"], content["commit_message"], base64.b64decode(content["file_data"]),
                          branch=content['branch_name'])
     return jsonify(f"file add to new branch {content['branch_name']}")
 
@@ -62,7 +64,7 @@ def api_updatefile():
     repo = g.get_repo(content["repo_name"])
     source = repo.get_branch("master")
     repo.create_git_ref(ref=f"refs/heads/{content['branch_name']}", sha=source.commit.sha)
-    repo.update_file(content["file_path"], content["commit_message"], content["file_data"],
+    repo.update_file(content["file_path"], content["commit_message"], base64.b64decode(content["file_data"]),
                      branch=content['branch_name'], sha=source.commit.sha)
     return jsonify("file has been updated")
 
@@ -82,3 +84,6 @@ def main():
 
 if __name__ == '__main__':  # pragma: no cover
     main()
+
+
+base64.b64encode()
