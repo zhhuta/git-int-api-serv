@@ -86,4 +86,3 @@ if __name__ == '__main__':  # pragma: no cover
     main()
 
 
-base64.b64encode()
