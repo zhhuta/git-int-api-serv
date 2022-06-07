@@ -1,12 +1,17 @@
 # Git Interface API microseervice 
-## instaltion and run
-instalation
+## Instaltion and local run for development
+### Instalation
 ```
 pip3 install -r requirements.txt
 ```
-run
+### run
 ```
-python3 main.py
+python3 -m flask run --host=0.0.0.0
+```
+### Build docker container and run
+```
+docker build --tag git-int-api .
+docker run -d -p 5000:5000 git-int-api
 ```
 ## API Endpoints
 This microservice expose next API end point
