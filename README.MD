@@ -1,5 +1,14 @@
 # Git Interface API microseervice 
-
+## instaltion and run
+instalation
+```
+pip3 install -r requirements.txt
+```
+run
+```
+python3 main.py
+```
+## API Endpoints
 This microservice expose next API end point
 
 ```GET /api/v1/getfile```
