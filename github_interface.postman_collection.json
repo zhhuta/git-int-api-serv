@@ -29,7 +29,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/api/v1/getfiles",
+					"raw": "http://127.0.0.1:{{port}}/api/v1/getfiles",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -37,7 +37,7 @@
 						"0",
 						"1"
 					],
-					"port": "5000",
+					"port": "{{port}}",
 					"path": [
 						"api",
 						"v1",
@@ -71,7 +71,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/api/v1/getfile",
+					"raw": "http://127.0.0.1:{{port}}/api/v1/getfile",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -79,7 +79,7 @@
 						"0",
 						"1"
 					],
-					"port": "5000",
+					"port": "{{port}}",
 					"path": [
 						"api",
 						"v1",
@@ -102,7 +102,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"user_token\": \"{{git_hub_token}}\",\n    \"repo_name\": \"zhhuta/webapp\",\n    \"branch_name\": \"branch_{{randomString}}\",\n    \"file_path\": \"main{{randomString}}.go\",\n    \"file_data\": \"someting to add {{randomString}} \",\n    \"commit_message\":\"Commit Message {{randomString}}\"\n\n}",
+					"raw": "{\n    \"user_token\": \"{{git_hub_token}}\",\n    \"repo_name\": \"zhhuta/webapp\",\n    \"branch_name\": \"branch_{{randomString}}\",\n    \"file_path\": \"main{{randomString}}.go\",\n    \"file_data\": \"UG9ydCA1MDAwIGlzIGluIHVzZSBieSBhbm90aGVyIHByb2dyYW0uIEVpdGhlciBpZGVudGlmeSBhbmQgc3RvcCB0aGF0IHByb2dyYW0sIG9yIHN0YXJ0IHRoZSBzZXJ2ZXIgd2l0aCBhIGRpZmZlcmVudCBwb3J0Lgo=\",\n    \"commit_message\":\"Commit Message {{randomString}}\"\n\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -110,7 +110,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/api/v1/addfile",
+					"raw": "http://127.0.0.1:{{port}}/api/v1/addfile",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -118,7 +118,7 @@
 						"0",
 						"1"
 					],
-					"port": "5000",
+					"port": "{{port}}",
 					"path": [
 						"api",
 						"v1",
@@ -141,7 +141,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"user_token\": \"{{git_hub_token}}\",\n    \"repo_name\": \"zhhuta/webapp\",\n    \"branch_name\": \"branch_{{randomString}}\",\n    \"file_path\": \"main1.go\",\n    \"file_data\": \"someting to add to existing file {{$randomCity}}\",\n    \"commit_message\":\"Commit Message\"\n\n}",
+					"raw": "{\n    \"user_token\": \"{{git_hub_token}}\",\n    \"repo_name\": \"zhhuta/webapp\",\n    \"branch_name\": \"branch_{{randomString}}\",\n    \"file_path\": \"main3.go\",\n    \"file_data\": \"UG9ydCA1MDAwIGlzIGluIHVzZSBieSBhbm90aGVyIHByb2dyYW0uIEVpdGhlciBpZGVudGlmeSBhbmQgc3RvcCB0aGF0IHByb2dyYW0sIG9yIHN0YXJ0IHRoZSBzZXJ2ZXIgd2l0aCBhIGRpZmZlcmVudCBwb3J0Lgo=\",\n    \"commit_message\":\"Commit Message\"\n\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -149,7 +149,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/api/v1/updatefile",
+					"raw": "http://127.0.0.1:{{port}}/api/v1/updatefile",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -157,7 +157,7 @@
 						"0",
 						"1"
 					],
-					"port": "5000",
+					"port": "{{port}}",
 					"path": [
 						"api",
 						"v1",
@@ -250,6 +250,10 @@
 			"key": "git_hub_token",
 			"value": "",
 			"type": "default"
+		},
+		{
+			"key": "port",
+			"value": "5000"
 		}
 	]
 }
